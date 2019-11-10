@@ -1,0 +1,61 @@
+$color_white: #ffffff;
+
+$color_smoky_white: #EBEBEB;
+
+$color_blue: #00B2FF;
+
+$color_blue_green_dark: #1B2D37;
+
+$color_blue_green: #203C42;
+
+$color_dim_gray: #666666;
+
+$color_gray_squirrel: #788891;
+
+$color_light_gray: #CDCDCD;
+
+// *** ширины ***
+
+$width_mobile: 320px;
+
+$width_tablet: 768px;
+
+$width_desctop: 1024px;
+
+$mobile-width-only: 767px;
+
+$retina-dpi: 144dpi;
+
+$retina-dppx: 1.5dppx;
+
+// *** размер шрифта ***
+
+$font_family_base: "PT Mono", "Courier New", monospace;
+
+$font_family_alt: "Roboto Condensed", "Arial", sans-serif;
+
+$font_size_main: 16px; // основной
+
+$font_weight_bold: 700;
+
+$font_weight_normal: 400;
+
+// ***** для фонов ****
+
+$background_color_default: $color_white; // основной фон страницы
+
+$background_color_content: $color_blue_green_dark; // блоки
+
+$background_color_element: $color_blue; // элементы форм, кнопки
+
+$background_color_social: $color_light_gray; // для соц сетей
+
+// ***** для текста ****
+
+$text_color_default: $color_dim_gray; // основной цвет текста
+
+$text_color_sub: $color_white; // дополнительный
+
+$text_color_footer: $color_blue_green_dark; // текс в подвале
+
+// ***** border ****
