@@ -1,0 +1,35 @@
+.other-info {
+  flex-grow: 1;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.other-info__list {
+  display: flex;
+  justify-content: space-between;
+
+  @include list-reset();
+
+  opacity: 0.5;
+}
+
+.other-info__link {
+  @include link-reset();
+  font-family: $font_family_base;
+  font-size: 13px;
+  line-height: 24px;
+  color: $text_color_footer;
+  font-weight: $font_weight_normal;
+  text-transform: uppercase;
+}
+
+// @media (max-width: 1023px) {
+
+// }
+
+@media (max-width: 767px) {
+  .other-info__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

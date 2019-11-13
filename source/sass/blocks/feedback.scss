@@ -1,0 +1,86 @@
+.feedback {
+  padding-top: 90px;
+  padding-bottom: 113px;
+  color: $color_white;
+  background-color: $color_blue;
+  background-image: url("../../img/paper_airplane.png");
+  background-repeat: no-repeat;
+  background-size: 511px 288px;
+  background-position: 25% 41%;
+}
+
+.feedback form {
+  margin-left: auto;
+  width: 575px;
+}
+
+.feedback legend {
+  margin-bottom: 10px;
+}
+
+.feedback__form-subtitle {
+  margin-bottom: 50px;
+}
+
+.feedback__form-list {
+  margin-bottom: 9px;
+}
+
+.feedback__form-item {
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.feedback__form-item:nth-child(2n+1) {
+  margin-right: 30px;
+}
+
+.feedback textarea {
+  min-height: 154px;
+}
+
+.feedback button[type="submit"] {
+  margin-right: 32px;
+  width: 270px;
+}
+
+@media (max-width: 1023px) {
+  .feedback {
+    background-image: none;
+  }
+
+  .feedback form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .feedback legend {
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feedback form {
+    width: 100%;
+  }
+
+  .feedback legend {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .feedback__form-item {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .feedback__form-item:nth-child(2n+1) {
+    margin-right: 0;
+  }
+
+  .feedback button[type="submit"] {
+    margin-right: 0;
+    width: 100%;
+  }
+}

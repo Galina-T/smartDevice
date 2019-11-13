@@ -1,0 +1,11 @@
+.social-list {
+  @include list-reset();
+  display: flex;
+}
+
+.social-list__item {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  margin-right: 16px;
+}

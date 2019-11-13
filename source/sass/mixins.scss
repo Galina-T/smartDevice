@@ -1,0 +1,80 @@
+@mixin inner() {
+  // padding-left: 253px;
+  // padding-right: 255px;
+
+  @media (max-width: 1023px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset() {
+  text-decoration: none;
+}
+
+@mixin substrate() {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+}
+
+
+// @mixin input-content($width, $height) {
+//   position: relative;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     width: $width;
+//     height: $height;
+//     border: $border_input;
+//     box-sizing: border-box;
+//   }
+// }
+
+// @mixin style-icon($width, $height) {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   left: 30px;
+//   width: $width;
+//   height: $height;
+// }
+
+// @mixin hover-active-link() {
+//   &:hover {
+//     opacity: 0.6;
+//   }
+
+//   &:active,
+//   &:focus {
+//     opacity: 0.3;
+//   }
+// }

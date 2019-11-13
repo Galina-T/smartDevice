@@ -1,0 +1,141 @@
+.catalog {
+  padding: 93px 0 127px;
+  background-color: $color_blue_green_dark;
+}
+
+.catalog__item {
+  width: 100%;
+  min-height: 620px;
+  margin-right: 30px;
+}
+
+.catalog__item:last-child {
+  margin-right: 0;
+}
+
+.catalog__link {
+  position: relative;
+  padding: 45px;
+  padding-top: 50px;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.catalog__link--manufacturing::before {
+  @include substrate();
+  background-image: url("../../img/service-manufacturing-desktop.png");
+}
+
+.catalog__link--mounting::before {
+  @include substrate();
+  background-image: url("../../img/service-mounting-desktop.png");
+}
+
+.catalog__link--components::before {
+  @include substrate();
+  background-image: url("../../img/components-desktop.png");
+}
+
+.catalog__title {
+  @include reset();
+  margin-bottom: 47px;
+  font-family: $font_family_alt;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: $font_weight_normal;
+  color: $text_color_sub;
+}
+
+.catalog__list {
+  @include list-reset ();
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__item-title {
+  @include reset();
+  width: 170px;
+  font-family: $font_family_alt;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: $font_weight_normal;
+  color: $text_color_sub;
+}
+
+.catalog__btn {
+  position: absolute;
+  padding: 0;
+  font-size: 0;
+  width: 63px;
+  height: 63px;
+  background-color: $color_blue;
+  border: none;
+  bottom: 0;
+  right: 0;
+}
+
+.catalog__btn::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 1px solid $color_white;
+  border-left: none;
+  border-bottom: none;
+  transform: rotate(45deg) translateY(-50%);
+  top: 50%;
+  right: 50%;
+}
+
+@media (max-width: 1023px) {
+  .catalog__item {
+    min-width: 715px;
+    min-height: 256px;
+    margin-right: 0;
+  }
+
+  .catalog__title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .catalog__list {
+    flex-direction: column;
+  }
+
+  .catalog__link--manufacturing::before {
+    background-image: url("../../img/service-manufacturing-tablet.png");
+  }
+
+  .catalog__link--mounting::before {
+    background-image: url("../../img/service-mounting-tablet.png");
+  }
+
+  .catalog__link--components::before {
+    background-image: url("../../img/components-tablet.png");
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog__item {
+    min-width: 290px;
+  }
+
+  .catalog__title {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .catalog__link--manufacturing::before {
+    background-image: url("../../img/service-manufacturing-mobile.png");
+  }
+
+  .catalog__link--mounting::before {
+    background-image: url("../../img/service-mounting-mobile.png");
+  }
+
+  .catalog__link--components::before {
+    background-image: url("../../img/components-mobile.png");
+  }
+}

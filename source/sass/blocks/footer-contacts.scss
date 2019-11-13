@@ -1,0 +1,26 @@
+// .footer-contacts {
+
+// }
+
+.footer-contacts__list {
+  @include list-reset();
+  opacity: 0.5;
+}
+
+.footer-contacts__address {
+  font-style: normal;
+}
+
+.footer-contacts__link {
+  text-decoration: none;
+  color: $text_color_footer;
+}
+
+
+// @media (max-width: 1023px) {
+
+// }
+
+// @media (max-width: 767px) {
+
+// }
