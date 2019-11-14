@@ -1,5 +1,6 @@
 'use strict';
 
+
 var OVERLAY_HIDDEN_CLASS = 'modal-cart__overlay--hidden';
 var LOCAL_STORAGE_KEY = 'smartDeviceData';
 
@@ -34,10 +35,10 @@ function closeModalClickHandler(evt) {
 }
 
 function closeModalClickHandlerOverlay(evt) {
-  evt.preventDefault();
-  evt.stopPropagation();
 
   if (evt.target === evt.currentTarget) {
+    evt.preventDefault();
+    evt.stopPropagation();
     modalOverlay.classList.add(OVERLAY_HIDDEN_CLASS);
     removeHandlers();
   }
