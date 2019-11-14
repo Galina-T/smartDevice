@@ -1,7 +1,8 @@
 .main-screen {
   margin-top: -120px;
   min-height: 878px;
-  background: url("../../img/background.png") repeat, url("../../img/circuits.png") no-repeat 85% 70% $color_blue_green_dark;
+  background: url("../../img/background.png") repeat,
+    url("../../img/circuits.png") no-repeat 85% 70% $color_blue_green_dark;
   padding-top: 316px;
   box-sizing: border-box;
 }
@@ -67,7 +68,8 @@
     margin-top: -94px;
     padding-top: 189px;
     min-height: 686px;
-    background: url("../../img/background.png") no-repeat, url("../../img/circuits.png") no-repeat 166% 33% $color_blue_green_dark;
+    background: url("../../img/background.png") no-repeat,
+      url("../../img/circuits.png") no-repeat 166% 33% $color_blue_green_dark;
     background-size: cover, 60%;
   }
 

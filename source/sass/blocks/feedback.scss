@@ -3,10 +3,10 @@
   padding-bottom: 113px;
   color: $color_white;
   background-color: $color_blue;
-  background-image: url("../../img/paper_airplane.png");
+  background-image: url("../../img/paper_airplane.png"), url("../../img/mask-triangles.svg");
   background-repeat: no-repeat;
-  background-size: 511px 288px;
-  background-position: 25% 41%;
+  background-size: 511px 288px, auto;
+  background-position: 25% 41%, top left;
 }
 
 .feedback form {
