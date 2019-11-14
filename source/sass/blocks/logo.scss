@@ -2,14 +2,16 @@
   display: flex;
 
   @include link-reset();
-}
 
-.logo--header {
-  flex-grow: 0.3;
-}
+  &--header {
+    flex-grow: 0.3;
+  }
 
-.logo--footer {
-  margin-bottom: 48px;
+  &--footer {
+    margin-bottom: 48px;
+  }
+
+  @include interactive();
 }
 
 .logo__img {
@@ -46,6 +48,10 @@
 @media (max-width: 1023px) {
   .logo--header {
     flex-grow: 1;
+  }
+
+  .logo--footer {
+    margin-bottom: 0;
   }
 }
 

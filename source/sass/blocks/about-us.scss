@@ -1,9 +1,14 @@
 .about-us {
-  padding: 37px 0 110px;
+  padding-top: 37px;
+  padding-bottom: 110px;
 }
 
 .about-us__wrapper {
   padding-left: 180px;
+  background-image: url("../../img/year.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -3%;
 }
 
 .about-us__title {
@@ -20,6 +25,10 @@
   margin-bottom: 20px;
 }
 
+.about-us__short-description {
+  display: none;
+}
+
 .about-us__btn {
   margin-top: 20px;
   max-width: 180px;
@@ -27,17 +36,54 @@
 
 @media (max-width: 1023px) {
   .about-us {
-    padding: 0 0 110px;
+    padding-top: 0;
+    padding-bottom: 84px;
+  }
+
+  .about-us__title {
+    font-size: 32px;
+    line-height: 45px;
   }
 
   .about-us__wrapper {
-    padding-left: 212px;
+    padding-left: 187px;
+    background-position: -28px;
+  }
+
+  .about-us__long-description {
+    display: none;
+  }
+
+  .about-us__short-description {
+    display: block;
+  }
+
+  .about-us__btn {
+    margin-top: 26px;
   }
 }
 
-
 @media (max-width: 767px) {
+  .about-us {
+    padding-top: 13px;
+    padding-bottom: 66px;
+  }
+
   .about-us__wrapper {
-    padding-left: 14px;
+    padding-left: 1px;
+    background-image: none;
+  }
+
+  .about-us__title {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-us__short-description {
+    margin-top: 40px;
+  }
+
+  .about-us__btn {
+    margin-top: 10px;
   }
 }

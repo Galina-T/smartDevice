@@ -23,16 +23,16 @@
 }
 
 .feedback__form-list {
-  margin-bottom: 9px;
+  margin-bottom: 50px;
 }
 
 .feedback__form-item {
   margin-bottom: 40px;
   flex-grow: 1;
-}
 
-.feedback__form-item:nth-child(2n+1) {
-  margin-right: 30px;
+  &:nth-child(2n+1) {
+    margin-right: 30px;
+  }
 }
 
 .feedback textarea {
@@ -46,40 +46,81 @@
 
 @media (max-width: 1023px) {
   .feedback {
+    padding-top: 81px;
+    padding-bottom: 104px;
     background-image: none;
   }
 
   .feedback form {
-    width: 80%;
+    width: 81%;
     margin: 0 auto;
   }
 
   .feedback legend {
+    margin-bottom: 16px;
     font-size: 32px;
     line-height: 45px;
+  }
+
+  .feedback__form-subtitle {
+    margin-bottom: 54px;
+  }
+
+  .feedback__form-list {
+    margin-bottom: 46px;
+  }
+
+  .feedback__form-item {
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
   }
 }
 
 @media (max-width: 767px) {
+  .feedback {
+    padding-top: 30px;
+    padding-bottom: 36px;
+  }
+
   .feedback form {
     width: 100%;
   }
 
   .feedback legend {
+    margin-bottom: 14px;
     font-size: 28px;
     line-height: 39px;
+  }
+
+  .feedback__form-subtitle {
+    margin-bottom: 24px;
+  }
+
+  .feedback__form-list {
+    margin-bottom: 23px;
   }
 
   .feedback__form-item {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 33px;
+
+    &:nth-child(2n+1) {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
   }
 
-  .feedback__form-item:nth-child(2n+1) {
-    margin-right: 0;
+  .feedback textarea {
+    min-height: 104px;
   }
 
   .feedback button[type="submit"] {
+    margin-bottom: 25px;
     margin-right: 0;
     width: 100%;
   }

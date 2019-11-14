@@ -16,17 +16,9 @@ button[type="submit"] {
   border: 1px solid $color_blue;
   border-radius: 5px;
   background-color: transparent;
+  cursor: pointer;
 
-  // &:hover {
-  //   color: $color_white;
-  //   background-color: $color_greyish_brown;
-  // }
-
-  // &:active,
-  // &:focus {
-  //   color: rgba($color: $color_white, $alpha: 0.3);
-  //   background-color: $color_greyish_brown;
-  // }
+  @include interactive();
 }
 
 button[type="submit"] {

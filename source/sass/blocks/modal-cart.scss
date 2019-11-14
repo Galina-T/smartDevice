@@ -1,12 +1,27 @@
 .modal-cart {
-  position: relative;
+  position: fixed;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 auto;
   padding: 30px 40px;
   width: 490px;
   background-color: $color_blue;
   color: $color_white;
   box-sizing: border-box;
-  display: none;
+}
+
+.modal-cart__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .modal-cart legend {
@@ -38,28 +53,32 @@
   height: 17px;
   border: none;
   background-color: transparent;
-}
 
-.modal-cart__btn--close::before {
-  position: absolute;
-  top: 8px;
-  left: -3px;
-  content: "";
-  display: block;
-  width: 22px;
-  height: 1px;
-  background-color: white;
-  transform: rotate(-45deg);
-}
+  &::before {
+    position: absolute;
+    top: 8px;
+    left: -3px;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 1px;
+    background-color: white;
+    transform: rotate(-45deg);
+  }
 
-.modal-cart__btn--close::after {
-  position: absolute;
-  top: 8px;
-  left: -3px;
-  content: "";
-  display: block;
-  width: 22px;
-  height: 1px;
-  background-color: white;
-  transform: rotate(45deg);
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: -3px;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 1px;
+    background-color: white;
+    transform: rotate(45deg);
+  }
+
+  input:checked + label::before {
+    background-image: none;
+  }
 }

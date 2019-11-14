@@ -1,11 +1,6 @@
 @mixin inner() {
-  // padding-left: 253px;
-  // padding-right: 255px;
-
-  @media (max-width: 1023px) {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+  padding-left: 25px;
+  padding-right: 25px;
 
   @media (max-width: 767px) {
     padding-left: 15px;
@@ -42,39 +37,12 @@
   opacity: 0.2;
 }
 
+@mixin interactive() {
+  &:hover {
+    opacity: 0.7;
+  }
 
-// @mixin input-content($width, $height) {
-//   position: relative;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     width: $width;
-//     height: $height;
-//     border: $border_input;
-//     box-sizing: border-box;
-//   }
-// }
-
-// @mixin style-icon($width, $height) {
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   left: 30px;
-//   width: $width;
-//   height: $height;
-// }
-
-// @mixin hover-active-link() {
-//   &:hover {
-//     opacity: 0.6;
-//   }
-
-//   &:active,
-//   &:focus {
-//     opacity: 0.3;
-//   }
-// }
+  &:active {
+    opacity: 0.3;
+  }
+}

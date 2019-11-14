@@ -7,5 +7,10 @@
   width: 27px;
   height: 27px;
   border-radius: 50%;
-  margin-right: 16px;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  @include interactive();
 }
