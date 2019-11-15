@@ -21,10 +21,12 @@
 }
 
 .catalog__item {
+  position: relative;
   min-height: 620px;
   margin-right: 30px;
   margin-bottom: 30px;
-  flex-grow: 1;
+  box-sizing: border-box;
+  width: calc(33% - 17px);
 
   &:nth-child(3n) {
     margin-right: 0;
@@ -79,6 +81,7 @@
   border: none;
   bottom: 0;
   right: 0;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -92,6 +95,8 @@
     top: 50%;
     right: 50%;
   }
+
+  @include interactive();
 }
 
 @media (max-width: $width_desctop) {
@@ -114,6 +119,7 @@
     min-height: 256px;
     margin-right: 0;
     display: flex;
+    width: 100%;
 
     &:not(:last-child) {
       margin-bottom: 47px;
