@@ -8,6 +8,7 @@
 }
 
 .main-screen__wrapper {
+  position: relative;
   max-width: 1411px;
   margin: 0 auto;
 }
@@ -63,6 +64,19 @@
   }
 }
 
+.main-screen__anchor {
+  position: absolute;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: $text_color_sub;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  bottom: -148px;
+  left: -40px;
+}
+
 @media (max-width: $width_desctop) {
   .main-screen {
     padding-top: 189px;
@@ -81,6 +95,10 @@
     max-width: 500px;
     font-size: 60px;
     line-height: 70px;
+  }
+
+  .main-screen__anchor {
+    display: none;
   }
 
   .main-screen__content {
