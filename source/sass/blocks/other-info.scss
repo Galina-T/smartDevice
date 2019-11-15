@@ -1,13 +1,14 @@
 .other-info {
   margin: 0 auto;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   max-width: 1461px;
   box-sizing: border-box;
 }
 
 .other-info__list {
   display: flex;
+  flex-wrap: wrap;
   letter-spacing: 0.04em;
 
   @include list-reset();
@@ -16,35 +17,42 @@
 }
 
 .other-info__list-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
   &--copyright {
     margin-left: auto;
   }
 
   &--years {
-    margin-left: 86px;
+    margin-left: 60px;
   }
 
   &--confidential {
-    margin-left: 163px;
+    margin-left: 130px;
   }
 }
 
 .other-info__link {
   @include link-reset();
+  padding-top: 4px;
+  padding-bottom: 4px;
   font-family: $font_family_base;
   font-size: 13px;
   line-height: 24px;
   color: $text_color_footer;
   font-weight: $font_weight_normal;
   text-transform: uppercase;
+  display: block;
 
   @include interactive();
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width_desctop) {
   .other-info {
-    padding-top: 20px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 
   .other-info__list-item--confidential {
@@ -52,10 +60,10 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .other-info {
-    padding-top: 28px;
-    padding-bottom: 26px;
+    padding-top: 24px;
+    padding-bottom: 22px;
   }
 
   .other-info__list {

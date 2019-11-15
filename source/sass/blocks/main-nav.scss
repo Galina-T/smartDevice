@@ -6,6 +6,7 @@
   margin: 0 auto;
   max-width: 1411px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -40,7 +41,7 @@
   @include interactive();
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width_desctop) {
   .main-nav {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -51,7 +52,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .main-nav {
     padding-top: 17px;
     padding-bottom: 17px;

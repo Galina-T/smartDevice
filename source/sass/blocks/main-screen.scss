@@ -1,8 +1,8 @@
 .main-screen {
-  margin-top: -120px;
   min-height: 878px;
   background: url("../../img/background.png") repeat,
-    url("../../img/circuits.png") no-repeat 85% 70% $color_blue_green_dark;
+    url("../../img/circuits.png") no-repeat 85% 70%,
+    url("../../img//mask-triangles.svg") no-repeat 85% 70% $color_blue_green_dark;
   padding-top: 316px;
   box-sizing: border-box;
 }
@@ -63,13 +63,13 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width_desctop) {
   .main-screen {
-    margin-top: -94px;
     padding-top: 189px;
     min-height: 686px;
     background: url("../../img/background.png") no-repeat,
-      url("../../img/circuits.png") no-repeat 166% 33% $color_blue_green_dark;
+      url("../../img/circuits.png") no-repeat 166% 33%,
+      url("../../img//mask-triangles.svg") no-repeat 166% 33% $color_blue_green_dark;
     background-size: cover, 60%;
   }
 
@@ -103,12 +103,12 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .main-screen {
-    margin-top: -72px;
     padding-top: 286px;
     min-height: 647px;
-    background: url("../../img/background.png") no-repeat, url("../../img/circuits.png") no-repeat 161% 22% $color_blue_green_dark;
+    background: url("../../img/background.png") no-repeat,
+      url("../../img/circuits.png") no-repeat 161% 22% $color_blue_green_dark;
     background-size: cover, 95%;
   }
 

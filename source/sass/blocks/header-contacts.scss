@@ -1,6 +1,7 @@
 .header-contacts {
   @include list-reset();
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   justify-content: flex-end;
 }
@@ -47,7 +48,7 @@
   border-color: $color_white;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width_desctop) {
   .header-contacts {
     flex-grow: 0;
   }
@@ -82,7 +83,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .header-contacts__item {
     margin-left: 17px;
   }

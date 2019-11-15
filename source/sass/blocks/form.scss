@@ -117,7 +117,7 @@
   background-image: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .form__agree--fix-width {
     padding-left: 34px;
     width: 100%;

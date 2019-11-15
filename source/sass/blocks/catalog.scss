@@ -1,15 +1,32 @@
 .catalog {
   padding-top: 93px;
-  padding-bottom: 127px;
+  padding-bottom: 100px;
   background-color: $color_blue_green_dark;
 }
 
+.catalog__title {
+  @include reset();
+  margin-bottom: 47px;
+  font-family: $font_family_alt;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: $font_weight_normal;
+  color: $text_color_sub;
+}
+
+.catalog__list {
+  @include list-reset ();
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .catalog__item {
-  width: 100%;
   min-height: 620px;
   margin-right: 30px;
+  margin-bottom: 30px;
+  flex-grow: 1;
 
-  &:last-child {
+  &:nth-child(3n) {
     margin-right: 0;
   }
 }
@@ -39,22 +56,6 @@
   }
 
   @include interactive();
-}
-
-.catalog__title {
-  @include reset();
-  margin-bottom: 47px;
-  font-family: $font_family_alt;
-  font-size: 36px;
-  line-height: 51px;
-  font-weight: $font_weight_normal;
-  color: $text_color_sub;
-}
-
-.catalog__list {
-  @include list-reset ();
-  display: flex;
-  justify-content: space-between;
 }
 
 .catalog__item-title {
@@ -92,10 +93,19 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width_desctop) {
   .catalog {
     padding-top: 50px;
-    padding-bottom: 77px;
+    padding-bottom: 50px;
+  }
+
+  .catalog__title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .catalog__list {
+    flex-direction: column;
   }
 
   .catalog__item {
@@ -107,15 +117,6 @@
     &:not(:last-child) {
       margin-bottom: 47px;
     }
-  }
-
-  .catalog__title {
-    font-size: 32px;
-    line-height: 45px;
-  }
-
-  .catalog__list {
-    flex-direction: column;
   }
 
   .catalog__link {
@@ -137,9 +138,15 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .catalog {
-    padding-bottom: 65px;
+    padding-bottom: 35px;
+  }
+
+  .catalog__title {
+    margin-bottom: 41px;
+    font-size: 28px;
+    line-height: 39px;
   }
 
   .catalog__item {
@@ -148,12 +155,6 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
-  }
-
-  .catalog__title {
-    margin-bottom: 41px;
-    font-size: 28px;
-    line-height: 39px;
   }
 
   .catalog__link {

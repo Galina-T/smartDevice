@@ -3,15 +3,28 @@
   padding-bottom: 113px;
   color: $color_white;
   background-color: $color_blue;
-  background-image: url("../../img/paper_airplane.png"), url("../../img/mask-triangles.svg");
-  background-repeat: no-repeat;
-  background-size: 511px 288px, auto;
-  background-position: 25% 41%, top left;
 }
 
 .feedback form {
   margin-left: auto;
   width: 575px;
+  z-index: 10;
+}
+
+.feedback .page-main__section-wrapper {
+  position: relative;
+}
+
+.feedback .page-main__section-wrapper::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 66px;
+  width: 44%;
+  height: 100%;
+  background-image: url("../../img/paper_airplane.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .feedback legend {
@@ -44,11 +57,15 @@
   width: 270px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width_desctop) {
   .feedback {
     padding-top: 81px;
     padding-bottom: 104px;
+  }
+
+  .feedback .page-main__section-wrapper::before {
     background-image: none;
+    display: none;
   }
 
   .feedback form {
@@ -77,7 +94,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .feedback {
     padding-top: 30px;
     padding-bottom: 36px;

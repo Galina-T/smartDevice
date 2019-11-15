@@ -18,6 +18,7 @@
   box-sizing: border-box;
   border: 1px solid $color_smoky_white;
   border-left: 3px solid $color_blue;
+  background-color: $background_color_default;
   cursor: pointer;
 
   &:nth-child(2n+1) {
@@ -61,7 +62,7 @@
   margin-bottom: 25px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $width_desctop) {
   .advantages__list {
     padding: 0;
   }
@@ -89,7 +90,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $width_tablet) {
   .advantages {
     padding-top: 39px;
   }
