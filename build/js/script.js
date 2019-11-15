@@ -54,6 +54,16 @@
   }
 
   function applyModalHandler(evt) {
+    var values = {
+      text: inputTextModal.value,
+      tel: inputTelModal.value,
+      comment: inputCommentModal.value,
+    };
+
+    if (Object.values(values).indexOf('null') === -1) {
+      return;
+    }
+
     evt.preventDefault();
     evt.stopPropagation();
 
