@@ -65,6 +65,10 @@
   color: $text_color_sub;
 }
 
+.form textarea {
+  resize: none;
+}
+
 .form__btn-wrapper {
   display: flex;
   flex-wrap: wrap;
