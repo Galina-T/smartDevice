@@ -12,27 +12,32 @@
   var footerContacts = document.querySelector('.footer-contacts');
   var btnToggleInFooterNav = footerNav.querySelector('.page-footer__toggle');
   var btnToggleInFooterContacts = footerContacts.querySelector('.page-footer__toggle');
+
   var footerNavList = document.querySelector('.footer-nav__list');
   var footerContactsList = document.querySelector('.footer-contacts__list');
 
-  function makeHandler(btn, list) {
-    return function handler(evt) {
-      evt.preventDefault();
 
-      btn.classList.toggle(TOGGLE_HIDDEN_CLASS);
-      btn.classList.toggle(TOGGLE_SHOW_CLASS);
+  function transformBtnAndList(btn, list) {
 
-      var btnText = btn.innerText;
+    btn.classList.toggle(TOGGLE_HIDDEN_CLASS);
+    btn.classList.toggle(TOGGLE_SHOW_CLASS);
 
-      btn.innerText = btnText === TEXT_OPEN ? TEXT_CLOSE : TEXT_OPEN;
+    var btnText = btn.innerText;
 
-      list.classList.toggle(HIDDEN_CLASS);
-    };
+    btn.innerText = btnText === TEXT_OPEN ? TEXT_CLOSE : TEXT_OPEN;
+
+    list.classList.toggle(HIDDEN_CLASS);
+  }
+
+  function handler(evt) {
+    evt.preventDefault();
+    transformBtnAndList(btnToggleInFooterNav, footerNavList);
+    transformBtnAndList(btnToggleInFooterContacts, footerContactsList);
   }
 
   function addHadlers() {
-    btnToggleInFooterNav.addEventListener('click', makeHandler(btnToggleInFooterNav, footerNavList));
-    btnToggleInFooterContacts.addEventListener('click', makeHandler(btnToggleInFooterContacts, footerContactsList));
+    footerNav.addEventListener('click', handler);
+    footerContacts.addEventListener('click', handler);
   }
 
   addHadlers();
