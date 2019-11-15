@@ -78,11 +78,11 @@
   cursor: pointer;
 
   &--open {
-    background-image: url("../../img/toggle-expand.svg");
+    background-image: url("../img/toggle-expand.svg");
   }
 
   &--close {
-    background-image: url("../../img/toggle-collapse.svg");
+    background-image: url("../img/toggle-collapse.svg");
   }
 
   @include interactive();
