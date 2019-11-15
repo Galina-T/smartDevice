@@ -53,6 +53,7 @@
   color: $text_color_sub;
   background-color: rgba($color: $color_white, $alpha: 0.1);
   border: 0;
+  cursor: pointer;
 }
 
 .form input::placeholder,
@@ -86,6 +87,7 @@
 .form__agree label {
   display: block;
   opacity: 0.8;
+  cursor: pointer;
 
   @include interactive();
 

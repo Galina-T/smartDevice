@@ -39,6 +39,7 @@
   height: 100%;
   display: block;
   box-sizing: border-box;
+  text-decoration: none;
 
   &--manufacturing::before {
     @include substrate();

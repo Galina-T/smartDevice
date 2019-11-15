@@ -1,36 +1,39 @@
 'use strict';
 
-var HIDDEN_CLASS = 'hidden';
-var TOGGLE_HIDDEN_CLASS = 'page-footer__toggle--close';
-var TOGGLE_SHOW_CLASS = 'page-footer__toggle--open';
-var TEXT_OPEN = 'Развернуть';
-var TEXT_CLOSE = 'Свернуть';
+(function () {
 
-var footerNav = document.querySelector('.footer-nav');
-var footerContacts = document.querySelector('.footer-contacts');
-var btnToggleInFooterNav = footerNav.querySelector('.page-footer__toggle');
-var btnToggleInFooterContacts = footerContacts.querySelector('.page-footer__toggle');
-var footerNavList = document.querySelector('.footer-nav__list');
-var footerContactsList = document.querySelector('.footer-contacts__list');
+  var HIDDEN_CLASS = 'hidden';
+  var TOGGLE_HIDDEN_CLASS = 'page-footer__toggle--close';
+  var TOGGLE_SHOW_CLASS = 'page-footer__toggle--open';
+  var TEXT_OPEN = 'Развернуть';
+  var TEXT_CLOSE = 'Свернуть';
 
-function makeHandler(btn, list) {
-  return function handler(evt) {
-    evt.preventDefault();
+  var footerNav = document.querySelector('.footer-nav');
+  var footerContacts = document.querySelector('.footer-contacts');
+  var btnToggleInFooterNav = footerNav.querySelector('.page-footer__toggle');
+  var btnToggleInFooterContacts = footerContacts.querySelector('.page-footer__toggle');
+  var footerNavList = document.querySelector('.footer-nav__list');
+  var footerContactsList = document.querySelector('.footer-contacts__list');
 
-    btn.classList.toggle(TOGGLE_HIDDEN_CLASS);
-    btn.classList.toggle(TOGGLE_SHOW_CLASS);
+  function makeHandler(btn, list) {
+    return function handler(evt) {
+      evt.preventDefault();
 
-    var btnText = btn.innerText;
+      btn.classList.toggle(TOGGLE_HIDDEN_CLASS);
+      btn.classList.toggle(TOGGLE_SHOW_CLASS);
 
-    btn.innerText = btnText === TEXT_OPEN ? TEXT_CLOSE : TEXT_OPEN;
+      var btnText = btn.innerText;
 
-    list.classList.toggle(HIDDEN_CLASS);
-  };
-}
+      btn.innerText = btnText === TEXT_OPEN ? TEXT_CLOSE : TEXT_OPEN;
 
-function addHadlers() {
-  btnToggleInFooterNav.addEventListener('click', makeHandler(btnToggleInFooterNav, footerNavList));
-  btnToggleInFooterContacts.addEventListener('click', makeHandler(btnToggleInFooterContacts, footerContactsList));
-}
+      list.classList.toggle(HIDDEN_CLASS);
+    };
+  }
 
-addHadlers();
+  function addHadlers() {
+    btnToggleInFooterNav.addEventListener('click', makeHandler(btnToggleInFooterNav, footerNavList));
+    btnToggleInFooterContacts.addEventListener('click', makeHandler(btnToggleInFooterContacts, footerContactsList));
+  }
+
+  addHadlers();
+})();
