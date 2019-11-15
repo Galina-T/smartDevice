@@ -45,6 +45,7 @@
   font-weight: $font_weight_normal;
   text-transform: uppercase;
   display: block;
+  cursor: pointer;
 
   @include interactive();
 }
