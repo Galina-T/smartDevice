@@ -27,21 +27,28 @@
     document.body.removeEventListener('keydown', closeModalKeyDownHandler);
   }
 
+  function lockScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  function unlockScroll() {
+    document.body.style.overflow = '';
+  }
+
   function closeModalClickHandler(evt) {
     evt.preventDefault();
-    evt.stopPropagation();
 
     modalOverlay.classList.add(OVERLAY_HIDDEN_CLASS);
     removeHandlers();
+    unlockScroll();
   }
 
   function closeModalClickHandlerOverlay(evt) {
-
     if (evt.target === evt.currentTarget) {
       evt.preventDefault();
-      evt.stopPropagation();
       modalOverlay.classList.add(OVERLAY_HIDDEN_CLASS);
       removeHandlers();
+      unlockScroll();
     }
   }
 
@@ -50,30 +57,25 @@
       modalOverlay.classList.add(OVERLAY_HIDDEN_CLASS);
 
       removeHandlers();
+      unlockScroll();
     }
   }
 
   function applyModalHandler(evt) {
-    var values = {
+    var data = {
       text: inputTextModal.value,
       tel: inputTelModal.value,
       comment: inputCommentModal.value,
     };
 
-    if (Object.values(values).indexOf('null') === -1) {
+    if (data.text === '' || data.tel === '' || data.comment === '') {
       return;
     }
-
     evt.preventDefault();
-    evt.stopPropagation();
 
-    var data = JSON.stringify({
-      text: inputTextModal.value,
-      tel: inputTelModal.value,
-      comment: inputCommentModal.value,
-    });
+    var json = JSON.stringify(data);
 
-    localStorage.setItem(LOCAL_STORAGE_KEY, data);
+    localStorage.setItem(LOCAL_STORAGE_KEY, json);
   }
 
   contactBtn.addEventListener('click', function (evt) {
@@ -94,5 +96,6 @@
 
     inputTextModal.focus();
     addHadlers();
+    lockScroll();
   });
 })();
