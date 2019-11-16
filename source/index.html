@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Smart Device - умные технологии">
   <title>Smart Device</title>
+  <script defer src="js/vendor.js"></script>
+  <script defer src="js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
@@ -132,15 +135,15 @@
             <p class="feedback__form-subtitle form__subtitle">Мы проконсультируем Вас бесплатно</p>
             <ul class="feedback__form-list form__list">
               <li class="feedback__form-item form__item">
-                <input type="text" name="name" id="name-field" placeholder="Имя" required>
+                <input type="text" name="name" id="name-field" placeholder="Имя" aria-label="Введите имя" required>
                 <label for="name-field">Имя</label>
               </li>
               <li class="feedback__form-item form__item">
-                <input type="tel" name="tel" id="tel-field" placeholder="Телефон" required>
+                <input type="tel" name="tel" id="tel-field" placeholder="Телефон" aria-label="Введите телефон" required>
                 <label for="tel-field">Телефон</label>
               </li>
               <li class="form__item form__item--grow">
-                <textarea class="form__textarea form__textarea--big" name="comment" id="comment-field" placeholder="Ваш вопрос" required></textarea>
+                <textarea class="form__textarea form__textarea--big" name="comment" id="comment-field" placeholder="Ваш вопрос" aria-label="Введите ваш вопрос" required></textarea>
                 <label for="comment-field">Ваш вопрос</label>
               </li>
             </ul>
@@ -172,7 +175,7 @@
         <p class="page-footer__year">1999-2018 sd service devices</p>
         <ul class="page-footer__list social-list">
           <li class="social-list__item">
-            <a href="#" class="social-list__link">
+            <a href="#" class="social-list__link" aria-label="Ссылка на Facebook">
               <svg width="27" height="27">
                 <use xlink:href="#icon-fb"></use>
               </svg>
@@ -180,7 +183,7 @@
             <span class="visually-hidden">Facebook</span>
           </li>
           <li class="social-list__item">
-            <a href="#" class="social-list__link">
+            <a href="#" class="social-list__link" aria-label="Ссылка на Одноклассники">
               <svg width="27" height="26">
                 <use xlink:href="#icon-o"></use>
               </svg>
@@ -188,7 +191,7 @@
             <span class="visually-hidden">Одноклассники</span>
           </li>
           <li class="social-list__item">
-            <a href="#" class="social-list__link">
+            <a href="#" class="social-list__link" aria-label="Ссылка в VK">
               <svg width="27" height="26">
                 <use xlink:href="#icon-vk"></use>
               </svg>
@@ -282,15 +285,15 @@
           <p class="modal-cart__form-subtitle form__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <ul class="form__list form__list--column">
             <li class="form__item">
-              <input type="text" name="name" id="name-field-modal" placeholder="Имя" required>
+              <input type="text" name="name-modal" id="name-field-modal" placeholder="Имя" required>
               <label for="name-field-modal">Имя</label>
             </li>
             <li class="form__item">
-              <input type="tel" name="tel" id="tel-field-modal" placeholder="Телефон" required>
+              <input type="tel" name="tel-modal" id="tel-field-modal" placeholder="Телефон" required>
               <label for="tel-field-modal">Телефон</label>
             </li>
             <li class="form__item">
-              <textarea name="comment" id="comment-field-modal" placeholder="Ваш вопрос" required></textarea>
+              <textarea name="comment-modal" id="comment-field-modal" placeholder="Ваш вопрос" required></textarea>
               <label for="comment-field-modal">Ваш вопрос</label>
             </li>
           </ul>
@@ -304,7 +307,5 @@
       </form>
     </section>
   </div>
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
