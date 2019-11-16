@@ -103,17 +103,17 @@
   .catalog__link {
     &--manufacturing::before {
       background-image: url("../img/service-manufacturing-desktop@2x.png");
-      background-size: contain;
+      background-size: cover;
     }
 
     &--mounting::before {
       background-image: url("../img/service-mounting-desktop@2x.png");
-      background-size: contain;
+      background-size: cover;
     }
 
     &--components::before {
       background-image: url("../img/components-desktop@2x.png");
-      background-size: contain;
+      background-size: cover;
     }
   }
 }
@@ -168,17 +168,17 @@
     .catalog__link {
       &--manufacturing::before {
         background-image: url("../img/service-manufacturing-tablet@2x.png");
-        background-size: contain;
+        background-size: cover;
       }
 
       &--mounting::before {
         background-image: url("../img/service-mounting-tablet@2x.png");
-        background-size: contain;
+        background-size: cover;
       }
 
       &--components::before {
         background-image: url("../img/components-tablet@2x.png");
-        background-size: contain;
+        background-size: cover;
       }
     }
   }
@@ -225,17 +225,17 @@
     .catalog__link {
       &--manufacturing::before {
         background-image: url("../img/service-manufacturing-mobile@2x.png");
-        background-size: contain;
+        background-size: cover;
       }
 
       &--mounting::before {
         background-image: url("../img/service-mounting-mobile@2x.png");
-        background-size: contain;
+        background-size: cover;
       }
 
       &--components::before {
         background-image: url("../img/components-mobile@2x.png");
-        background-size: contain;
+        background-size: cover;
       }
     }
   }

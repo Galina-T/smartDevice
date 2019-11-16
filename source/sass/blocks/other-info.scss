@@ -17,6 +17,13 @@
 }
 
 .other-info__list-item {
+  // font-family: $font_family_base;
+  // font-size: 13px;
+  // line-height: 24px;
+  // color: $text_color_footer;
+  // font-weight: $font_weight_normal;
+  // text-transform: uppercase;
+
   &:not(:last-child) {
     margin-right: 10px;
   }
@@ -36,6 +43,19 @@
       margin-left: auto;
     }
   }
+}
+
+.other-info__list-item p {
+  @include reset();
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-family: $font_family_base;
+  font-size: 13px;
+  line-height: 24px;
+  color: $text_color_footer;
+  font-weight: $font_weight_normal;
+  text-transform: uppercase;
 }
 
 .other-info__link {
