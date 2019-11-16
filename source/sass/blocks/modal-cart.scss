@@ -11,19 +11,6 @@
   box-sizing: border-box;
 }
 
-.modal-cart__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-
-  &--hidden {
-    display: none;
-  }
-}
-
 .modal-cart legend {
   margin-bottom: 12px;
   font-size: 28px;
@@ -39,7 +26,7 @@
 }
 
 .modal-cart button[type="submit"] {
-  margin-bottom: 39px;
+  margin-bottom: 34px;
 }
 
 .modal-cart__btn--close {

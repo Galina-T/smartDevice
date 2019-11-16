@@ -8,7 +8,7 @@
 
 .header-contacts__item {
   margin-left: 47px;
-  min-width: 180px;
+  min-width: 181px;
   display: flex;
   align-items: center;
 
@@ -43,7 +43,10 @@
 }
 
 .header-contacts__btn {
-  width: 180px;
+  padding-top: 14px;
+  padding-right: 12px;
+  padding-bottom: 13px;
+  width: 178px;
   color: $text_color_sub;
   border-color: $color_white;
 }

@@ -1,10 +1,10 @@
 .main-nav {
   @include inner();
 
-  padding-top: 33px;
-  padding-bottom: 33px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   margin: 0 auto;
-  max-width: 1411px;
+  max-width: 1414px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -31,7 +31,7 @@
 
     width: 37px;
     height: 1px;
-    top: 35%;
+    top: 40%;
     left: 0;
 
     background-color: #ffffff;
@@ -49,17 +49,25 @@
 
   .main-nav__toggle {
     margin-right: 35px;
+
+    &--closed::before {
+      top: 33%;
+    }
   }
 }
 
 @media (max-width: $width_tablet) {
   .main-nav {
-    padding-top: 17px;
+    padding-top: 16px;
     padding-bottom: 17px;
   }
 
   .main-nav__toggle {
     height: 38px;
     margin-right: 23px;
+
+    &--closed::before {
+      top: 30%;
+    }
   }
 }

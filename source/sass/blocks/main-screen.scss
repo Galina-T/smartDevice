@@ -9,17 +9,17 @@
 
 .main-screen__wrapper {
   position: relative;
-  max-width: 1411px;
+  max-width: 1420px;
   margin: 0 auto;
 }
 
-.main-screen__title,
-.main-screen__content {
+.main-screen h1,
+.main-screen p {
   @include reset();
   color: $text_color_sub;
 }
 
-.main-screen__title {
+.main-screen h1 {
   margin-bottom: 27px;
   max-width: 720px;
   font-family: $font_family_alt;
@@ -30,7 +30,7 @@
   text-transform: uppercase;
 }
 
-.main-screen__content {
+.main-screen p {
   position: relative;
   max-width: 650px;
   margin-left: 98px;
@@ -51,6 +51,7 @@
 
 .main-screen__btn {
   margin-left: 98px;
+  margin-bottom: 30px;
   padding-top: 17px;
   padding-bottom: 17px;
   width: 407px;
@@ -73,8 +74,8 @@
   color: $text_color_sub;
   opacity: 0.5;
   transform: rotate(-90deg);
-  bottom: -148px;
-  left: -40px;
+  bottom: -118px;
+  left: -35px;
 }
 
 @media (max-width: $width_desctop) {
@@ -91,7 +92,7 @@
     padding-left: 62px;
   }
 
-  .main-screen__title {
+  .main-screen h1 {
     max-width: 500px;
     font-size: 60px;
     line-height: 70px;
@@ -101,7 +102,7 @@
     display: none;
   }
 
-  .main-screen__content {
+  .main-screen p {
     max-width: 400px;
     margin-left: 51px;
     margin-bottom: 56px;
@@ -134,13 +135,13 @@
     padding-left: 0;
   }
 
-  .main-screen__title {
+  .main-screen h1 {
     width: 300px;
     font-size: 40px;
     line-height: 47px;
   }
 
-  .main-screen__content {
+  .main-screen p {
     margin-bottom: 40px;
     max-width: 280px;
     font-size: 16px;
@@ -161,6 +162,7 @@
 
     &--short {
       display: block;
+      padding-left: 16px;
     }
   }
 }

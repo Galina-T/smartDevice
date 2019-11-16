@@ -20,7 +20,7 @@
   font-weight: $font_weight_normal;
 }
 
-.about-us__text {
+.about-us p {
   @include reset();
   margin-bottom: 20px;
 }
@@ -30,7 +30,7 @@
 }
 
 .about-us__btn {
-  margin-top: 20px;
+  margin-top: 18px;
   max-width: 180px;
 }
 
@@ -43,6 +43,7 @@
   .about-us__title {
     font-size: 32px;
     line-height: 45px;
+    margin-bottom: 24px;
   }
 
   .about-us__wrapper {
@@ -59,14 +60,14 @@
   }
 
   .about-us__btn {
-    margin-top: 26px;
+    margin-top: 23px;
   }
 }
 
 @media (max-width: $width_tablet) {
   .about-us {
-    padding-top: 13px;
-    padding-bottom: 66px;
+    padding-top: 11px;
+    padding-bottom: 64px;
   }
 
   .about-us__wrapper {
@@ -75,6 +76,7 @@
   }
 
   .about-us__title {
+    margin-bottom: 20px;
     font-size: 28px;
     line-height: 39px;
   }
@@ -84,6 +86,6 @@
   }
 
   .about-us__btn {
-    margin-top: 10px;
+    margin-top: 9px;
   }
 }

@@ -17,3 +17,15 @@
 .footer-contacts__list--close {
   display: none;
 }
+
+@media (max-width: $width_desctop) {
+  .footer-contacts {
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: $width_tablet) {
+  .footer-contacts__list {
+    margin-top: 35px;
+  }
+}

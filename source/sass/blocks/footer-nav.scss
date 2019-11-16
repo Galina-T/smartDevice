@@ -1,13 +1,14 @@
 .footer-nav {
   margin-left: 11%;
-  width: 604px;
+  width: 591px;
+  padding-left: 16px;
   box-sizing: border-box;
 
-  @media (max-width: 1390px) {
-    margin-left: 0;
+  @media (max-width: 1412px) {
+    margin-left: auto;
   }
 
-  @media (max-width: 1237px) {
+  @media (max-width: 1257px) {
     width: 320px;
   }
 }
@@ -48,6 +49,7 @@
 @media (max-width: $width_desctop) {
   .footer-nav {
     margin-left: 0;
+    padding-left: 26px;
   }
 
   .footer-nav__item {
@@ -63,6 +65,12 @@
 
 @media (max-width: $width_tablet) {
   .footer-nav {
+    padding-top: 30px;
+    padding-left: 15px;
     width: 100%;
+  }
+
+  .footer-nav__list {
+    padding-top: 35px;
   }
 }

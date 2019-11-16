@@ -31,6 +31,10 @@
 
   &--confidential {
     margin-left: 130px;
+
+    @media (max-width: 1200px) {
+      margin-left: auto;
+    }
   }
 }
 
@@ -59,6 +63,10 @@
   .other-info__list-item--confidential {
     margin-left: 0;
   }
+
+  .other-info__list-item--none {
+    display: none;
+  }
 }
 
 @media (max-width: $width_tablet) {
@@ -74,7 +82,8 @@
 
   .other-info__list-item {
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 13px;
+      margin-right: 0;
     }
 
     &--copyright {

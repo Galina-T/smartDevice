@@ -1,12 +1,12 @@
 .catalog {
-  padding-top: 93px;
-  padding-bottom: 100px;
+  padding-top: 89px;
+  padding-bottom: 97px;
   background-color: $color_blue_green_dark;
 }
 
-.catalog__title {
+.catalog p {
   @include reset();
-  margin-bottom: 47px;
+  margin-bottom: 51px;
   font-family: $font_family_alt;
   font-size: 36px;
   line-height: 51px;
@@ -61,7 +61,7 @@
   @include interactive();
 }
 
-.catalog__item-title {
+.catalog__item p {
   @include reset();
   width: 170px;
   font-family: $font_family_alt;
@@ -102,10 +102,11 @@
 @media (max-width: $width_desctop) {
   .catalog {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 47px;
   }
 
-  .catalog__title {
+  .catalog p {
+    margin-bottom: 46px;
     font-size: 32px;
     line-height: 45px;
   }
@@ -129,7 +130,7 @@
   .catalog__link {
     height: auto;
 
-    padding-top: 45px;
+    padding-top: 41px;
 
     &--manufacturing::before {
       background-image: url("../img/service-manufacturing-tablet.png");
@@ -150,8 +151,9 @@
     padding-bottom: 35px;
   }
 
-  .catalog__title {
+  .catalog p {
     margin-bottom: 41px;
+    padding-left: 11px;
     font-size: 28px;
     line-height: 39px;
   }

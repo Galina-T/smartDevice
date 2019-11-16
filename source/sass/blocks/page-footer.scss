@@ -10,7 +10,7 @@
 
 .page-footer__container {
   margin: 0 auto;
-  max-width: 1461px;
+  max-width: 1465px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -19,7 +19,7 @@
 
 .page-footer__section {
   @include inner();
-  padding-top: 66px;
+  padding-top: 65px;
   padding-bottom: 58px;
 
   &--pressed {
@@ -29,7 +29,7 @@
 
 .page-footer__wrapper {
   width: 100%;
-  border-top: 1px solid #626962;
+  border-top: $border_footer;
 }
 
 .page-footer__social {
@@ -90,13 +90,13 @@
 
 @media (max-width: $width_desctop) {
   .page-footer__container {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     justify-content: space-between;
   }
 
   .page-footer__section {
     padding-top: 19px;
-    padding-bottom: 19px;
+    padding-bottom: 24px;
 
     &--pressed {
       margin-left: 0;
@@ -109,15 +109,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid #626962;
+    border-bottom: $border_footer;
   }
 
   .page-footer__year {
     display: block;
-  }
-
-  .page-footer__item--none {
-    display: none;
   }
 }
 
@@ -133,7 +129,7 @@
     margin-bottom: 0;
     position: relative;
     flex-direction: column;
-    border-top: 1px solid #626962;
+    border-top: $border_footer;
   }
 
   .page-footer__social {
@@ -145,7 +141,7 @@
   }
 
   .page-footer__logo {
-    margin-bottom: 21px;
+    margin-bottom: 24px;
   }
 
   .page-footer__year {
@@ -161,7 +157,7 @@
   }
 
   .page-footer__title {
-    margin-bottom: 35px;
+    margin-bottom: 0;
 
     &--close {
       margin-bottom: 0;

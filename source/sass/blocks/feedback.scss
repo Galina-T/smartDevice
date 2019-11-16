@@ -7,7 +7,7 @@
 
 .feedback form {
   margin-left: auto;
-  width: 575px;
+  width: 573px;
   z-index: 10;
 }
 
@@ -28,19 +28,23 @@
 }
 
 .feedback legend {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .feedback__form-subtitle {
   margin-bottom: 50px;
+  padding-left: 3px;
 }
 
 .feedback__form-list {
-  margin-bottom: 50px;
+  margin-bottom: 38px;
+  padding-left: 4px;
 }
 
 .feedback__form-item {
-  margin-bottom: 40px;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
   flex-grow: 1;
 
   &:nth-child(2n+1) {
@@ -48,12 +52,17 @@
   }
 }
 
+.feedback input {
+  padding-left: 16px;
+}
+
 .feedback textarea {
   min-height: 154px;
+  padding-left: 16px;
 }
 
 .feedback button[type="submit"] {
-  margin-right: 32px;
+  margin-right: 23px;
   width: 270px;
 }
 
@@ -69,7 +78,7 @@
   }
 
   .feedback form {
-    width: 81%;
+    width: 82%;
     margin: 0 auto;
   }
 
@@ -84,13 +93,18 @@
   }
 
   .feedback__form-list {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 
   .feedback__form-item {
     &:not(:last-child) {
       margin-bottom: 42px;
     }
+  }
+
+  .feedback button[type=submit] {
+    margin-right: 25px;
+    width: 279px;
   }
 }
 
@@ -115,7 +129,7 @@
   }
 
   .feedback__form-list {
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   }
 
   .feedback__form-item {
@@ -128,17 +142,22 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
   }
 
   .feedback textarea {
     min-height: 104px;
+    padding-left: 13px;
   }
 
   .feedback button[type="submit"] {
     margin-bottom: 25px;
     margin-right: 0;
     width: 100%;
+  }
+
+  .feedback input {
+    padding-left: 13px;
   }
 }
