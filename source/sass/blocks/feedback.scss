@@ -22,7 +22,7 @@
   top: 66px;
   width: 44%;
   height: 100%;
-  background-image: url("../img/paper_airplane.png");
+  background-image: url("../img/paper_airplane@1x.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -66,6 +66,14 @@
   width: 270px;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .feedback .page-main__section-wrapper::before {
+    background-image: url("../img/paper_airplane@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 @media (max-width: $width_desctop) {
   .feedback {
     padding-top: 81px;
@@ -102,7 +110,7 @@
     }
   }
 
-  .feedback button[type=submit] {
+  .feedback button[type="submit"] {
     margin-right: 25px;
     width: 279px;
   }

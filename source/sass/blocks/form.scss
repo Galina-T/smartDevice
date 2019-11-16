@@ -10,6 +10,7 @@
   font-size: 36px;
   line-height: 51px;
   font-weight: $font_weight_normal;
+  color: inherit;
 }
 
 .form__subtitle {
@@ -53,14 +54,15 @@
   color: $text_color_sub;
   background-color: rgba($color: $color_white, $alpha: 0.1);
   border: 0;
+  outline-style: none;
 
   &:hover {
-    border-color: $color_white;
+    box-shadow: 0 0 0 1px $color_white;
   }
 
   &:active,
   &:focus {
-    border-color: $color_white;
+    box-shadow: 0 0 0 1px $color_white;
   }
 }
 

@@ -1,7 +1,7 @@
 .main-screen {
   min-height: 878px;
-  background: url("../img/background.png") repeat,
-    url("../img/circuits.png") no-repeat 85% 70%,
+  background: url("../img/background@1x.png") repeat,
+    url("../img/circuits@1x.png") no-repeat 85% 70%,
     url("../img//mask-triangles.svg") no-repeat 85% 70% $color_blue_green_dark;
   padding-top: 316px;
   box-sizing: border-box;
@@ -74,16 +74,24 @@
   color: $text_color_sub;
   opacity: 0.5;
   transform: rotate(-90deg);
-  bottom: -118px;
+  top: 419px;
   left: -35px;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .main-screen {
+    background: url("../img/background@2x.png") repeat,
+      url("../img/circuits@2x.png") no-repeat cover,
+      url("../img//mask-triangles.svg") no-repeat 85% 70% $color_blue_green_dark;
+  }
 }
 
 @media (max-width: $width_desctop) {
   .main-screen {
     padding-top: 189px;
     min-height: 686px;
-    background: url("../img/background.png") no-repeat,
-      url("../img/circuits.png") no-repeat 166% 33%,
+    background: url("../img/background@1x.png") no-repeat,
+      url("../img/circuits@1x.png") no-repeat 166% 33%,
       url("../img//mask-triangles.svg") no-repeat 166% 33% $color_blue_green_dark;
     background-size: cover, 60%;
   }
@@ -120,14 +128,23 @@
     margin-left: 51px;
     width: 379px;
   }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-screen {
+      background: url("../img/background@2x.png") no-repeat,
+        url("../img/circuits@2x.png") no-repeat 166% 33%,
+        url("../img//mask-triangles.svg") no-repeat 166% 33% $color_blue_green_dark;
+      background-size: cover, 60%;
+    }
+  }
 }
 
 @media (max-width: $width_tablet) {
   .main-screen {
     padding-top: 286px;
     min-height: 647px;
-    background: url("../img/background.png") no-repeat,
-      url("../img/circuits.png") no-repeat 161% 22% $color_blue_green_dark;
+    background: url("../img/background@1x.png") no-repeat,
+      url("../img/circuits@1x.png") no-repeat 161% 22% $color_blue_green_dark;
     background-size: cover, 95%;
   }
 
@@ -163,6 +180,14 @@
     &--short {
       display: block;
       padding-left: 16px;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-screen {
+      background: url("../img/background@2x.png") no-repeat,
+        url("../img/circuits@2x.png") no-repeat 161% 22% $color_blue_green_dark;
+      background-size: cover, 95%;
     }
   }
 }

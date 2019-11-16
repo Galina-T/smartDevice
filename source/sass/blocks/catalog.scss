@@ -45,17 +45,17 @@
 
   &--manufacturing::before {
     @include substrate();
-    background-image: url("../img/service-manufacturing-desktop.png");
+    background-image: url("../img/service-manufacturing-desktop@1x.png");
   }
 
   &--mounting::before {
     @include substrate();
-    background-image: url("../img/service-mounting-desktop.png");
+    background-image: url("../img/service-mounting-desktop@1x.png");
   }
 
   &--components::before {
     @include substrate();
-    background-image: url("../img/components-desktop.png");
+    background-image: url("../img/components-desktop@1x.png");
   }
 
   @include interactive();
@@ -99,6 +99,25 @@
   @include interactive();
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .catalog__link {
+    &--manufacturing::before {
+      background-image: url("../img/service-manufacturing-desktop@2x.png");
+      background-size: contain;
+    }
+
+    &--mounting::before {
+      background-image: url("../img/service-mounting-desktop@2x.png");
+      background-size: contain;
+    }
+
+    &--components::before {
+      background-image: url("../img/components-desktop@2x.png");
+      background-size: contain;
+    }
+  }
+}
+
 @media (max-width: $width_desctop) {
   .catalog {
     padding-top: 50px;
@@ -133,15 +152,34 @@
     padding-top: 41px;
 
     &--manufacturing::before {
-      background-image: url("../img/service-manufacturing-tablet.png");
+      background-image: url("../img/service-manufacturing-tablet@1x.png");
     }
 
     &--mounting::before {
-      background-image: url("../img/service-mounting-tablet.png");
+      background-image: url("../img/service-mounting-tablet@1x.png");
     }
 
     &--components::before {
-      background-image: url("../img/components-tablet.png");
+      background-image: url("../img/components-tablet@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .catalog__link {
+      &--manufacturing::before {
+        background-image: url("../img/service-manufacturing-tablet@2x.png");
+        background-size: contain;
+      }
+
+      &--mounting::before {
+        background-image: url("../img/service-mounting-tablet@2x.png");
+        background-size: contain;
+      }
+
+      &--components::before {
+        background-image: url("../img/components-tablet@2x.png");
+        background-size: contain;
+      }
     }
   }
 }
@@ -171,15 +209,34 @@
     padding-left: 35px;
 
     &--manufacturing::before {
-      background-image: url("../img/service-manufacturing-mobile.png");
+      background-image: url("../img/service-manufacturing-mobile@1x.png");
     }
 
     &--mounting::before {
-      background-image: url("../img/service-mounting-mobile.png");
+      background-image: url("../img/service-mounting-mobile@1x.png");
     }
 
     &--components::before {
-      background-image: url("../img/components-mobile.png");
+      background-image: url("../img/components-mobile@1x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .catalog__link {
+      &--manufacturing::before {
+        background-image: url("../img/service-manufacturing-mobile@2x.png");
+        background-size: contain;
+      }
+
+      &--mounting::before {
+        background-image: url("../img/service-mounting-mobile@2x.png");
+        background-size: contain;
+      }
+
+      &--components::before {
+        background-image: url("../img/components-mobile@2x.png");
+        background-size: contain;
+      }
     }
   }
 }
