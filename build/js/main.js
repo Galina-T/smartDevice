@@ -27,14 +27,14 @@
 
   function addHandlers() {
     modalCLoseBtn.addEventListener('click', closeModalClickHandler);
-    modalOverlay.addEventListener('click', closeModalClickHandlerOverlay);
+    modalOverlay.addEventListener('mousedown', closeModalClickHandlerOverlay);
     submitBtn.addEventListener('click', applyModalHandler);
     document.body.addEventListener('keydown', closeModalKeyDownHandler);
   }
 
   function removeHandlers() {
     modalCLoseBtn.removeEventListener('click', closeModalClickHandler);
-    modalOverlay.removeEventListener('click', closeModalClickHandlerOverlay);
+    modalOverlay.removeEventListener('mousedown', closeModalClickHandlerOverlay);
     submitBtn.removeEventListener('click', applyModalHandler);
     document.body.removeEventListener('keydown', closeModalKeyDownHandler);
   }
@@ -48,11 +48,18 @@
   }
 
   function closeModalClickHandlerOverlay(evt) {
-    if (evt.target === evt.currentTarget) {
-      evt.preventDefault();
-      modalOverlay.classList.add(OVERLAY_HIDDEN_CLASS);
-      removeHandlers();
-      unlockScroll();
+    function mouseupHandler(evt_) {
+      if (evt_.target === modalOverlay) {
+        evt_.preventDefault();
+        modalOverlay.classList.add(OVERLAY_HIDDEN_CLASS);
+        removeHandlers();
+        unlockScroll();
+      }
+      modalOverlay.removeEventListener('mouseup', mouseupHandler);
+    }
+
+    if (evt.target === modalOverlay) {
+      modalOverlay.addEventListener('mouseup', mouseupHandler);
     }
   }
 
