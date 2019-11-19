@@ -138,12 +138,8 @@
   background-image: none;
 }
 
-.form .invalid-input {
-  box-shadow: 0 0 0 1px red;
-}
-
-.form__agree .invalid-label {
-  color:red;
+.form__agree--invalid label::before{
+  border-color:red;
 }
 
 @media (max-width: $width_tablet) {
@@ -165,7 +161,7 @@
   }
 
   .form__agree--fix-width label::before {
-    top: 8px;
+    top: 0;
     left: -3px;
   }
 }
