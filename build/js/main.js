@@ -5,7 +5,7 @@
   var OVERLAY_HIDDEN_CLASS = 'overlay--hidden';
   var LOCAL_STORAGE_KEY = 'smartDeviceData';
   var ESC_KEY_CODE = 27;
-  var onlyNumberRegEx = /^[0-9]*$/;
+  var onlyNumberRegEx = /^\+?\d[ (-]?\d{3}[ )-]?\d{3}([ -]?\d{2}){2}$/gi;
 
   var contactBtn = document.querySelector('.header-contacts__btn');
   var modalOverlay = document.querySelector('.overlay');
@@ -13,6 +13,7 @@
   var inputTextModal = document.querySelector('#name-field-modal');
   var inputTelModal = document.querySelector('#tel-field-modal');
   var inputCommentModal = document.querySelector('#comment-field-modal');
+  var checkbox = document.querySelector('#consent-checkbox-modal');
   var submitBtn = document.querySelector('.form__submit');
 
   var elements = [contactBtn, modalOverlay, modalCLoseBtn, inputTextModal, inputTelModal, inputCommentModal, submitBtn];
@@ -29,6 +30,9 @@
     modalCLoseBtn.addEventListener('click', closeModalClickHandler);
     modalOverlay.addEventListener('mousedown', closeModalClickHandlerOverlay);
     submitBtn.addEventListener('click', applyModalHandler);
+    inputTextModal.addEventListener('input', inputChangeHandler);
+    inputTelModal.addEventListener('input', telChangeHandler);
+    inputCommentModal.addEventListener('input', inputChangeHandler);
     document.body.addEventListener('keydown', closeModalKeyDownHandler);
   }
 
@@ -36,7 +40,21 @@
     modalCLoseBtn.removeEventListener('click', closeModalClickHandler);
     modalOverlay.removeEventListener('mousedown', closeModalClickHandlerOverlay);
     submitBtn.removeEventListener('click', applyModalHandler);
+    inputTextModal.removeEventListener('input', inputChangeHandler);
+    inputTelModal.removeEventListener('input', telChangeHandler);
+    inputCommentModal.removeEventListener('input', inputChangeHandler);
     document.body.removeEventListener('keydown', closeModalKeyDownHandler);
+  }
+
+  function checkValide(el) {
+    if (el.value) {
+      return;
+    }
+    el.classList.add('invalid-input');
+  }
+
+  function removeInvalide(el) {
+    el.classList.remove('invalid-input');
   }
 
   function closeModalClickHandler(evt) {
@@ -72,15 +90,48 @@
     }
   }
 
+  function inputChangeHandler(evt) {
+    if (!evt.target.checkValidity() && evt.target.value !== '') {
+      removeInvalide(evt.target);
+    }
+  }
+
+  function telChangeHandler(evt) {
+    if (!evt.target.checkValidity() && evt.target.value !== '' && onlyNumberRegEx.test(evt.target.value.trim())) {
+      removeInvalide(evt.target);
+      evt.target.setCustomValidity('');
+    }
+  }
+
   function applyModalHandler(evt) {
-    if (!inputTextModal.checkValidity() || !inputTelModal.checkValidity() || !inputCommentModal.checkValidity()) {
+    inputTelModal.setCustomValidity('');
+
+    if (
+      !inputTextModal.checkValidity() ||
+      !inputTelModal.checkValidity() ||
+      !inputCommentModal.checkValidity() ||
+      !checkbox.checkValidity()
+    ) {
+      checkValide(inputTextModal);
+      checkValide(inputTelModal);
+      checkValide(inputCommentModal);
       return;
     }
 
-    if (!onlyNumberRegEx.test(inputTelModal.value)) {
-      inputTelModal.setCustomValidity('The field can contain only numbers');
+    if (!onlyNumberRegEx.test(inputTelModal.value.trim())) {
+      inputTelModal.classList.add('invalid-input');
+      inputTelModal.setCustomValidity('Not valid phone number');
       return;
     }
+
+    if (!checkbox.checked) {
+      checkbox.setCustomValidity('required');
+      return;
+    }
+
+    removeInvalide(inputTextModal);
+    removeInvalide(inputTelModal);
+    removeInvalide(inputCommentModal);
 
     evt.preventDefault();
 
@@ -91,6 +142,13 @@
     });
 
     localStorage.setItem(LOCAL_STORAGE_KEY, json);
+    inputTextModal.value = '';
+    inputTelModal.value = '';
+    inputCommentModal.value = '';
+
+    modalOverlay.classList.add(OVERLAY_HIDDEN_CLASS);
+    removeHandlers();
+    unlockScroll();
   }
 
   contactBtn.addEventListener('click', function (evt) {
@@ -102,13 +160,13 @@
 
     modalOverlay.classList.remove(OVERLAY_HIDDEN_CLASS);
 
-    var data = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (data !== null) {
-      var parsedData = JSON.parse(data);
-      inputTextModal.value = parsedData.text;
-      inputTelModal.value = parsedData.tel;
-      inputCommentModal.value = parsedData.comment;
-    }
+    // var data = localStorage.getItem(LOCAL_STORAGE_KEY);
+    // if (data !== null) {
+    //   var parsedData = JSON.parse(data);
+    //   inputTextModal.value = parsedData.text;
+    //   inputTelModal.value = parsedData.tel;
+    //   inputCommentModal.value = parsedData.comment;
+    // }
 
     inputTextModal.focus();
     addHandlers();
