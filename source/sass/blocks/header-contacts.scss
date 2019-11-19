@@ -43,12 +43,11 @@
 }
 
 .header-contacts__btn {
-  padding-top: 14px;
   padding-right: 12px;
-  padding-bottom: 13px;
   width: 178px;
   color: $text_color_sub;
   border-color: $color_white;
+  z-index: 1;
 }
 
 @media (max-width: $width_desctop) {

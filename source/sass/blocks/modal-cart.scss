@@ -27,6 +27,7 @@
 
 .modal-cart button[type="submit"] {
   margin-bottom: 34px;
+  cursor: pointer;
 }
 
 .modal-cart__btn--close {
@@ -40,6 +41,9 @@
   height: 17px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+
+  @include interactive();
 
   &::before {
     position: absolute;

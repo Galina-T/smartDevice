@@ -76,6 +76,8 @@
   transform: rotate(-90deg);
   top: 419px;
   left: -35px;
+
+  @include interactive();
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

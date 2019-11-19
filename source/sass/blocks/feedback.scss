@@ -3,6 +3,10 @@
   padding-bottom: 113px;
   color: $color_white;
   background-color: $color_blue;
+  // background-image: url("../../img/sm.svg");
+  // background-repeat: no-repeat;
+  // background-size: 100%;
+  // background-position: -857px 84%;
 }
 
 .feedback form {
@@ -25,6 +29,19 @@
   background-image: url("../img/paper_airplane@1x.png");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.feedback .page-main__section-wrapper::after {
+  content: "";
+  position: absolute;
+  left: -526px;
+  top: -60px;
+  width: 44%;
+  height: 100%;
+  background-image: url("../img/mask-triangles.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center
 }
 
 .feedback legend {

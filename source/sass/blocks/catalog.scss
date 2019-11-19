@@ -4,7 +4,7 @@
   background-color: $color_blue_green_dark;
 }
 
-.catalog p {
+.catalog .page-main__section-wrapper > p {
   @include reset();
   margin-bottom: 51px;
   font-family: $font_family_alt;
@@ -124,7 +124,7 @@
     padding-bottom: 47px;
   }
 
-  .catalog p {
+  .catalog .page-main__section-wrapper > p {
     margin-bottom: 46px;
     font-size: 32px;
     line-height: 45px;
@@ -164,6 +164,11 @@
     }
   }
 
+  .catalog__link--components p {
+    margin-top: 9px;
+
+  }
+
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .catalog__link {
       &--manufacturing::before {
@@ -189,7 +194,7 @@
     padding-bottom: 35px;
   }
 
-  .catalog p {
+  .catalog .page-main__section-wrapper > p {
     margin-bottom: 41px;
     padding-left: 11px;
     font-size: 28px;
